@@ -1,0 +1,47 @@
+let users = [
+                {"UserId":"9ee22408-3101-454d-ade8-1fc9a1f90ee9","Name":"User1","Password":"A123!"},
+                {"UserId":"673a8f35-dbda-4fd5-952d-ceb9bf2d57c5","Name":"User2","Password":"A234!"}
+            ];
+
+let products = [
+                    {"ProductId":"8dfb1c32-c8ac-4487-bf44-833bcce3d80f","Name":"Pepsi","Price":25},
+                    {"ProductId":"5b63ac19-9e18-47ad-ab94-30d3ebbf10e2","Name":"Cola","Price":30},
+                    {"ProductId":"cb43d93c-2ef4-440c-bfd9-2ab02c6292eb","Name":"Fanta","Price":27}
+
+
+let invoices= [
+                {"InvoiceId":"e57a082b-f835-402b-a7c4-baf9ebb42483","Name":"Invoice-01","UserId":"9ee22408-3101-454d-ade8-1fc9a1f90ee9","PaidDate":"2020-05-12T00:00:00Z"},
+                {"InvoiceId":"1f9a7676-15a3-44b6-9d3e-83d4a8d798a3","Name":"Invoice-02","UserId":"9ee22408-3101-454d-ade8-1fc9a1f90ee9","PaidDate":"2020-05-12T00:00:00Z"},
+                {"InvoiceId":"74b1141d-f4bd-48e1-a749-8b4fe9537da9","Name":"Invoice-03","UserId":"9ee22408-3101-454d-ade8-1fc9a1f90ee9","PaidDate":"2020-05-12T00:00:00Z"},
+                {"InvoiceId":"cf868171-b4ae-4abb-8b0f-1140889b547e","Name":"Invoice-04","UserId":"9ee22408-3101-454d-ade8-1fc9a1f90ee9","PaidDate":"2020-05-12T00:00:00Z"},
+                {"InvoiceId":"b55d977c-f052-4a25-9cd3-048837dda049","Name":"Invoice-05","UserId":"673a8f35-dbda-4fd5-952d-ceb9bf2d57c5","PaidDate":"2020-05-12T00:00:00Z"},
+                {"InvoiceId":"f3cddbf0-3074-4bd9-8b79-ea9bc9b36e9d","Name":"Invoice-06","UserId":"673a8f35-dbda-4fd5-952d-ceb9bf2d57c5","PaidDate":"2020-05-12T00:00:00Z"},
+                {"InvoiceId":"3fe4f996-8eb7-44cc-bd89-61377cdfed96","Name":"Invoice-07","UserId":"673a8f35-dbda-4fd5-952d-ceb9bf2d57c5","PaidDate":"2020-05-12T00:00:00Z"},
+                {"InvoiceId":"c1bf5034-d144-4a91-8d80-634003442673","Name":"Invoice-08","UserId":"673a8f35-dbda-4fd5-952d-ceb9bf2d57c5","PaidDate":"2020-05-12T00:00:00Z"}
+            ]
+let invoiceLine = [
+                    {"InvoiceLineId":"4dfe83f7-3ef4-4b9c-ac49-762d085bfdd0","InvoiceId":"e57a082b-f835-402b-a7c4-baf9ebb42483","ProductId":"cb43d93c-2ef4-440c-bfd9-2ab02c6292eb","Quantity":2},
+                    {"InvoiceLineId":"c5c3f621-b762-4b2d-bab8-4cdb99b16735","InvoiceId":"e57a082b-f835-402b-a7c4-baf9ebb42483","ProductId":"5b63ac19-9e18-47ad-ab94-30d3ebbf10e2","Quantity":32},
+                    {"InvoiceLineId":"092ef96c-08fc-47a9-b77d-4b20868eea4b","InvoiceId":"e57a082b-f835-402b-a7c4-baf9ebb42483","ProductId":"8dfb1c32-c8ac-4487-bf44-833bcce3d80f","Quantity":31},
+                    {"InvoiceLineId":"0a9d55fb-b454-45aa-9405-45b13f76a5f3","InvoiceId":"1f9a7676-15a3-44b6-9d3e-83d4a8d798a3","ProductId":"cb43d93c-2ef4-440c-bfd9-2ab02c6292eb","Quantity":14},
+                    {"InvoiceLineId":"860d781f-48df-489d-9168-82fb25517e8f","InvoiceId":"1f9a7676-15a3-44b6-9d3e-83d4a8d798a3","ProductId":"5b63ac19-9e18-47ad-ab94-30d3ebbf10e2","Quantity":7},
+                    {"InvoiceLineId":"69ae991b-39d6-4ba1-b42f-762057dd6613","InvoiceId":"1f9a7676-15a3-44b6-9d3e-83d4a8d798a3","ProductId":"8dfb1c32-c8ac-4487-bf44-833bcce3d80f","Quantity":5},
+                    {"InvoiceLineId":"98f981f2-c03d-4569-a3dc-48ced4e68120","InvoiceId":"74b1141d-f4bd-48e1-a749-8b4fe9537da9","ProductId":"cb43d93c-2ef4-440c-bfd9-2ab02c6292eb","Quantity":1},
+                    {"InvoiceLineId":"793f88cc-d609-45e0-a939-9e6b574f02f0","InvoiceId":"74b1141d-f4bd-48e1-a749-8b4fe9537da9","ProductId":"5b63ac19-9e18-47ad-ab94-30d3ebbf10e2","Quantity":9},
+                    {"InvoiceLineId":"b52f77d6-da64-48fb-9d20-71235810c96b","InvoiceId":"74b1141d-f4bd-48e1-a749-8b4fe9537da9","ProductId":"8dfb1c32-c8ac-4487-bf44-833bcce3d80f","Quantity":13},
+                    {"InvoiceLineId":"7c3ad4d6-8578-451d-96fa-6a23d7c74483","InvoiceId":"cf868171-b4ae-4abb-8b0f-1140889b547e","ProductId":"cb43d93c-2ef4-440c-bfd9-2ab02c6292eb","Quantity":42},
+                    {"InvoiceLineId":"0aa9b070-e33f-4d58-8105-4b3a61dcd2aa","InvoiceId":"cf868171-b4ae-4abb-8b0f-1140889b547e","ProductId":"5b63ac19-9e18-47ad-ab94-30d3ebbf10e2","Quantity":7},
+                    {"InvoiceLineId":"b7288e9a-0339-4f16-b633-d5c7b45347df","InvoiceId":"cf868171-b4ae-4abb-8b0f-1140889b547e","ProductId":"8dfb1c32-c8ac-4487-bf44-833bcce3d80f","Quantity":1},
+                    {"InvoiceLineId":"7cf56a23-9af5-4495-86c7-967bd06a7c80","InvoiceId":"b55d977c-f052-4a25-9cd3-048837dda049","ProductId":"cb43d93c-2ef4-440c-bfd9-2ab02c6292eb","Quantity":5},
+                    {"InvoiceLineId":"22aba913-469a-44dd-9473-9153fedbfaf9","InvoiceId":"b55d977c-f052-4a25-9cd3-048837dda049","ProductId":"5b63ac19-9e18-47ad-ab94-30d3ebbf10e2","Quantity":6},
+                    {"InvoiceLineId":"bb93836c-72f0-4ba1-8370-7f5134b3e6d7","InvoiceId":"b55d977c-f052-4a25-9cd3-048837dda049","ProductId":"8dfb1c32-c8ac-4487-bf44-833bcce3d80f","Quantity":2},
+                    {"InvoiceLineId":"f31ddb31-6c91-4df1-b73b-7e063aa99b2b","InvoiceId":"f3cddbf0-3074-4bd9-8b79-ea9bc9b36e9d","ProductId":"cb43d93c-2ef4-440c-bfd9-2ab02c6292eb","Quantity":1},
+                    {"InvoiceLineId":"739d11e5-3a37-45d0-b6a7-d423e87005ba","InvoiceId":"f3cddbf0-3074-4bd9-8b79-ea9bc9b36e9d","ProductId":"5b63ac19-9e18-47ad-ab94-30d3ebbf10e2","Quantity":23},
+                    {"InvoiceLineId":"231e43d0-1017-46be-9729-7997c6f5a0e4","InvoiceId":"f3cddbf0-3074-4bd9-8b79-ea9bc9b36e9d","ProductId":"8dfb1c32-c8ac-4487-bf44-833bcce3d80f","Quantity":17},
+                    {"InvoiceLineId":"8303f2ef-c759-4c31-a16c-dec22dfe2379","InvoiceId":"3fe4f996-8eb7-44cc-bd89-61377cdfed96","ProductId":"cb43d93c-2ef4-440c-bfd9-2ab02c6292eb","Quantity":9},
+                    {"InvoiceLineId":"34597a4d-c904-435b-a59a-8091ce69084a","InvoiceId":"3fe4f996-8eb7-44cc-bd89-61377cdfed96","ProductId":"5b63ac19-9e18-47ad-ab94-30d3ebbf10e2","Quantity":56},
+                    {"InvoiceLineId":"0264fed8-b415-4c05-bc0e-82010e3db81e","InvoiceId":"3fe4f996-8eb7-44cc-bd89-61377cdfed96","ProductId":"8dfb1c32-c8ac-4487-bf44-833bcce3d80f","Quantity":31},
+                    {"InvoiceLineId":"a6086f93-e06c-4e1d-b55d-4e1396e2370b","InvoiceId":"c1bf5034-d144-4a91-8d80-634003442673","ProductId":"cb43d93c-2ef4-440c-bfd9-2ab02c6292eb","Quantity":25},
+                    {"InvoiceLineId":"ee74514a-baf5-42eb-8b95-44e485abcd43","InvoiceId":"c1bf5034-d144-4a91-8d80-634003442673","ProductId":"5b63ac19-9e18-47ad-ab94-30d3ebbf10e2","Quantity":72},
+                    {"InvoiceLineId":"59cd2928-c289-49ac-ad39-5979770a2c25","InvoiceId":"c1bf5034-d144-4a91-8d80-634003442673","ProductId":"8dfb1c32-c8ac-4487-bf44-833bcce3d80f","Quantity":68}
+                ]
